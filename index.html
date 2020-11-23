@@ -98,6 +98,7 @@ a:hover {
 </center>
 <br>
 
+This page shows DCL's qualitative visual examples and failure cases for concept learning. We will make our code, models and data available as soon as possible.
 <table align=center width=900px>
     <h1>Contents</h1>
     <tr>
@@ -165,32 +166,64 @@ a:hover {
             <center>
             <div class="test">
 
-                <div style="float:left">
+                <div style="float:center">
                     <div>
-                        <figcaption style="text-align:left"><strong>Q.</strong>: What is the color of the last object&nbsp; &nbsp;<br/>
-                        to collide with the metal sphere?
+                        <figcaption style="text-align:left"><strong>Question 1</strong>: What is the color of the last object to collide with the metal sphere? 
                         <br/>
-                            <strong>A.</strong>: Brown. &nbsp; (<strong>GT.</strong>: Brown.)
+                            <strong>Predicted Answer</strong>: Brown. &nbsp; (<strong>Ground-truth Answer</strong>: Brown.)
                         </figcaption>
+                         <br/>
                         <img class="rounded" src = "./images/qa_clevrer/10007.avi.gif" height="175px"></img>
+                        <figcaption> (a). Descriptive question sample. Extracted object trajectories, predictive  </br>
+                        collision, in and out are marked with green, red, blue and yellow colors. </figcaption> <br/>
                     </div>
                 </div>
 
-                <div style="float:left">
+                <div style="float:center">
                     <div>
-                        <figcaption style="text-align:left"><strong>Q.</strong>: How many falling blocks are there?&nbsp; &nbsp;<br/>
-                            <strong>A.</strong>: 2. &nbsp; (<strong>GT.</strong>: 2)
+                        <figcaption style="text-align:left"><strong>Question 2</strong>: Which of the following is responsible for the collision between the yellow cube and the cylinder?<br/>
+                        <strong>Choice 1</strong>: The collision between the green metal object and the metal sphere.  (<strong>Predicted</strong>: Wrong)   &nbsp; (<strong>GT.</strong>: Wrong) <br/>
+                        <strong>Choice 2</strong>: The green metal cube's colliding with the yellow cube.  (<strong>Predicted</strong>: Correct.)   &nbsp; (<strong>GT.</strong>: Correct.) <br/>
+                        <strong>Choice 3</strong>: The green metal object's entering the scene.  (<strong>Predicted</strong>: Correct.)   &nbsp; (<strong>GT.</strong>: Correct.) <br/>
                         </figcaption>
-                        <img class="rounded" src = "./images/qa_clevrer/10007.avi.gif" height="175px"></img>
+                         <br/>
+                        <img class="rounded" src = "./images/qa_clevrer/10054.avi.gif" height="175px"></img>
+                        <figcaption> (b). Explanatory question sample. Extracted object trajectories, predictive  </br>
+                        collision, in and out are marked with green, red, blue and yellow colors. </figcaption> <br/>
                     </div>
                 </div>
 
-                <div style="float:left">
+                <div style="float:center">
                     <div>
-                        <figcaption style="text-align:left"><strong>Q.</strong>: What is the color of the block at the top?&nbsp; &nbsp;<br/>
-                            <strong>A.</strong>: Blue. &nbsp; (<strong>GT.</strong>: Blue)
+                        <figcaption style="text-align:left"><strong>Question 3</strong>: What will happen next?<br/>
+                        <strong>Choice 1</strong>: The cylinder collides with the blue sphere.  (<strong>Predicted</strong>: Correct.)   &nbsp; (<strong>GT.</strong>: Correct.) <br/>
+                        <strong>Choice 2</strong>: The cylinder and the red object collide.  (<strong>Predicted</strong>: Wrong)   &nbsp; (<strong>GT.</strong>: Wrong) <br/>
                         </figcaption>
-                        <img class="rounded" src = "./images/qa_clevrer/10007.avi.gif" height="175px"></img>
+                         <br/>
+                        <img class="rounded" src = "./images/qa_clevrer/10053_-1.avi.gif" height="175px"></img>
+                        <figcaption> (c). Predictive question sample. Objects and evnets predicted in the future scenes are marked with black boxes. </br>
+                        Extracted object trajectories, predictive collision, in and out are marked with green, red, blue and yellow colors. </figcaption> <br/>
+                    </div>
+                </div>
+
+
+                <div style="float:center">
+                    <div>
+                        <figcaption style="text-align:left"><strong>Question 4</strong>: Without the red sphere, which of the following will happen?<br/>
+                        <strong>Choice 1</strong>: The cylinder collides with the blue object.  (<strong>Predicted</strong>: Wrong)   &nbsp; (<strong>GT.</strong>: Wrong) <br/>
+                        <strong>Choice 2</strong>: The yellow object and the cylinder collide.  (<strong>Predicted</strong>: Correct.)   &nbsp; (<strong>GT.</strong>: Correct.) <br/>
+                        </figcaption>
+                        <div>
+                            <img class="rounded" src = "./images/qa_clevrer/10053.avi.gif" height="175px"></img> </br>
+                            Original Video.
+                        </div>
+                        </br>
+                        <div>
+                            <img class="rounded" src = "./images/qa_clevrer/10053_2.avi.gif" height="175px"></img> </br>
+                            Counterfacutal Video. </br>
+                        </div>
+                        </br>
+                        (d). Counterfactual question sample. </br>
                     </div>
                 </div>
 
@@ -198,12 +231,6 @@ a:hover {
              </div>
             </center>
         </td>
-    </tr>
-    <td align=center width=600px>
-            <figcaption>Qualitative Results on BLOCK TOWERS. Questions, predicted answers and ground-truth anoswers are
-             marked with <strong>Q.</strong>, <strong>A.</strong> and <strong>GT.</strong>, respectively. Extracted object trajectories are bounded by the target objects' predicted colors.
-              <strong>Falling</strong> objects are marked with <font color=red><b>falling</b></font> on top of their bounding boxes.  </figcaption>
-    </td>
     </tr>
 </table>
 <hr>
@@ -248,9 +275,11 @@ a:hover {
             </div>
         </td>
     </tr>
+    <tr>
         <td align=center width=900px>
             <figcaption>We visualize typical examples of CLEVRER-Grounding. The query expressions are shown on top of the videos and the spatio-temporal localization results in the videos are bounded with green boxes. DCL can explicitly ground object and event concepts, analyze temporal structures, and understanding the complex logic to localize the target event or object.
         </td>
+    </tr>
 </table>
 <hr>
 
@@ -340,16 +369,35 @@ a:hover {
               <strong>Falling</strong> objects are marked with <font color=red><b>falling</b></font> on top of their bounding boxes.  </figcaption>
         </td>
     </tr>
-
+    <br/>
 </table>
 <hr>
 
-<table align=center width=900px>
+<table align=center width=600px>
     <center><h1><a name="Failure Cases on CLEVRER-QA">Failure Cases on CLEVRER-QA</h1></center>
     <tr>
-        <td align=center width=900px>
-            <center><img class="rounded" src = "./images/framework.png" height="300px"></img></center>
-        </td>
+            <figcaption style="text-align:left"><strong>Question</strong>: What will <b>not</b> happen if the green object is removed?<br/>
+            <strong>Choice 1</strong>: The sphere collides with the cylinder.  (<strong>Predicted</strong>: Wrong)   &nbsp; (<strong>GT.</strong>: Wrong.) <br/>
+            <strong>Choice 2</strong>: The cylinder collides with the gray cube.  (<strong>Predicted</strong>: Correct.)   &nbsp; (<strong>GT.</strong>: Correct.) <br/>
+            <strong>Choice 3</strong>: The sphere collides with the gray cube. (<strong>Predicted</strong>: Correct.)   &nbsp; (<strong>GT.</strong>: <font color=red>Wrong</font>.) <br/>
+            </figcaption>
+            </br>
+            <center>
+                <div>
+                    <img class="rounded" src = "./images/failure_cases/10065.avi.gif" height="175px"></img> </br>
+                    Original Video.
+                </div>
+                </br>
+                <div>
+                    <img class="rounded" src = "./images/failure_cases/10065_0.avi.gif" height="175px"></img> </br>
+                    Counterfacutal Video. </br>
+                </div>
+                </br>
+                A typical faiulre cases of DCL. The sphere collides with the gray cube near the end of the video, which require </br>
+                the dynamic predictor to have long-term dynamic prediction capacity. The dynamic predictor fails to predict the </br>
+                long-term trajectories of the sphere, leading to DCL's failure prediction for Choice 3. 
+                </br>
+            </center>
     </tr>
 </table>
 <hr>
