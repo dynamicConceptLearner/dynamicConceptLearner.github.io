@@ -1,0 +1,358 @@
+
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight:300;
+    font-size:18px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+}
+h1 {
+    font-weight:300;
+}
+
+.disclaimerbox {
+    background-color: #eee;
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    padding: 20px;
+}
+
+video.header-vid {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+}
+
+img.header-img {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+}
+
+img.rounded {
+    border: 0px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+}
+
+a:link,a:visited
+{
+    color: #1367a7;
+    text-decoration: none;
+}
+a:hover {
+    color: #208799;
+  }
+
+  td.dl-link {
+      height: 160px;
+      text-align: center;
+      font-size: 22px;
+  }
+
+  .vert-cent {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+
+  hr
+  {
+      border: 0;
+      height: 1px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+</style>
+
+<html>
+<head>
+<title></title>
+<meta property="og:image" content="./images/framework.png"/>
+<meta property="og:title" content="GROUNDING PHYSICAL OBJECT AND EVENT CONCEPTS THROUGH DYNAMIC VISUAL REASONING" />
+</head>
+
+<body>
+<br>
+<center>
+    <span style="font-size:38px">GROUNDING PHYSICAL OBJECT AND EVENT CONCEPTS THROUGH DYNAMIC VISUAL REASONING</span><br>
+    <br>
+
+    <table align=center width=900px>
+        <tr>
+            <td align=center width=300px>
+                <span style="font-size:22px"><a href='https://openreview.net/pdf?id=bhCDO_cEGCz'> Paper Under Review</a></span>
+            <br>
+    </table>
+</center>
+<br>
+
+<table align=center width=900px>
+    <h1>Contents</h1>
+    <tr>
+      <a href="#Visualization of Concept Learning on CLEVRER">Visualization of Concept Learning on CLEVRER</a> <br/>
+      <a href="#Visualization of Concept Learning on BLOCK TOWERS">Visualization of Concept Learning on BLOCK TOWERS</a> <br/>
+      <a href="#Qualitative Results on CLEVRER-QA">Qualitative Results on CLEVRER-QA </a> <br/>
+      <a href="#Qualitative Results on CLEVRER-Grounding">Qualitative Results on CLEVRER-Grounding</a> <br/>
+      <a href="#Qualitative Results on CLEVRER-Retrieval">Qualitative Results on CLEVRER-Retrieval</a> <br/>
+      <a href="#Qualitative Results on BLOCK TOWERS">Qualitative Results on BLOCK TOWERS</a> <br/>
+      <a href="#Failure Cases on CLEVRER-QA">Failure Cases on CLEVRER-QA </a> <br/>
+    </tr>
+</table>
+<hr>
+
+
+<table align=center width=900px>
+    <center><h1><a name="Visualization of Concept Learning on CLEVRER"></a> Visualization of Concept Learning on CLEVRER</h1></center>
+    <tr>
+        <td align=center width=900px>
+            <center>
+            <div class="test">
+            <img class="rounded" src = "./images/concept_clevrer/10010_scene.avi.gif" height="145px"></img>
+            <img class="rounded" src = "./images/concept_clevrer/10004_scene.avi.gif" height="145px"></img>
+            <img class="rounded" src = "./images/concept_clevrer/10009_scene.avi.gif" height="145px"></img>
+            <img class="rounded" src = "./images/concept_clevrer/10000_scene.avi.gif" height="145px"></img>
+            </center>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td align=center width=900px>
+            <figcaption>We visualize the dynamic concepts learned by DCL on CLEVRER. We parse the scenes by densely quantizing the concepts in each
+            frame. Extracted object trajectories, predictive <strong>collision</strong>, <strong>in</strong> and <strong>out</strong> are marked with <font color=green><b>green</b></font>, <font color=red><b>red</b></font>, <font color=blue><b>blue</b></font> and <font color=yellow><b>yellow</b></font> colors.  </figcaption>
+        </td>
+    </tr>
+</table>
+<hr>
+
+<table align=center width=900px>
+    <center><h1><a name="Visualization of Concept Learning on BLOCK TOWERS"></a> Visualization of Concept Learning on BLOCK TOWERS</h1></center>
+    <tr>
+        <td align=center width=900px>
+            <center>
+            <div class="test">
+            <img class="rounded" src = "./images/concept_blocks/15_-2.avi.gif" height="175px"></img>
+            <img class="rounded" src = "./images/concept_blocks/224_-2.avi.gif" height="175px"></img>
+            <img class="rounded" src = "./images/concept_blocks/35_-2.avi.gif" height="175px"></img>
+            <img class="rounded" src = "./images/concept_blocks/95_-2.avi.gif" height="175px"></img>
+            <img class="rounded" src = "./images/concept_blocks/442_-2.avi.gif" height="175px"></img>
+            </center>
+            </div>
+        </td>
+        </tr>
+        <td align=center width=600px>
+            <figcaption>We visualize the dynamic concepts learned by DCL on BLOCK TOWERS. We parse the scenes by densely quantizing the <strong>color</strong> and <strong>falling</strong> concepts  in each video. Extracted object trajectories are bounded by the predicted color. <strong>Falling</strong> objects are marked with <font color=red><b>falling</b></font> on top of their bounding boxes.  </figcaption>
+        </td>
+    </tr>
+</table>
+<hr>
+
+<table align=center width=900px>
+    <center><h1><a name="Qualitative Results on CLEVRER-QA"></a>Qualitative Results on CLEVRER-QA</h1></center>
+    <tr>
+        <td align=center width=900px>
+            <center>
+            <div class="test">
+
+                <div style="float:left">
+                    <div>
+                        <figcaption style="text-align:left"><strong>Q.</strong>: What is the color of the last object&nbsp; &nbsp;<br/>
+                        to collide with the metal sphere?
+                        <br/>
+                            <strong>A.</strong>: Brown. &nbsp; (<strong>GT.</strong>: Brown.)
+                        </figcaption>
+                        <img class="rounded" src = "./images/qa_clevrer/10007.avi.gif" height="175px"></img>
+                    </div>
+                </div>
+
+                <div style="float:left">
+                    <div>
+                        <figcaption style="text-align:left"><strong>Q.</strong>: How many falling blocks are there?&nbsp; &nbsp;<br/>
+                            <strong>A.</strong>: 2. &nbsp; (<strong>GT.</strong>: 2)
+                        </figcaption>
+                        <img class="rounded" src = "./images/qa_clevrer/10007.avi.gif" height="175px"></img>
+                    </div>
+                </div>
+
+                <div style="float:left">
+                    <div>
+                        <figcaption style="text-align:left"><strong>Q.</strong>: What is the color of the block at the top?&nbsp; &nbsp;<br/>
+                            <strong>A.</strong>: Blue. &nbsp; (<strong>GT.</strong>: Blue)
+                        </figcaption>
+                        <img class="rounded" src = "./images/qa_clevrer/10007.avi.gif" height="175px"></img>
+                    </div>
+                </div>
+
+
+             </div>
+            </center>
+        </td>
+    </tr>
+    <td align=center width=600px>
+            <figcaption>Qualitative Results on BLOCK TOWERS. Questions, predicted answers and ground-truth anoswers are
+             marked with <strong>Q.</strong>, <strong>A.</strong> and <strong>GT.</strong>, respectively. Extracted object trajectories are bounded by the target objects' predicted colors.
+              <strong>Falling</strong> objects are marked with <font color=red><b>falling</b></font> on top of their bounding boxes.  </figcaption>
+    </td>
+    </tr>
+</table>
+<hr>
+
+<table align=center width=900px>
+    <center><h1><a name="Qualitative Results on CLEVRER-Grounding"></a>Qualitative Results on CLEVRER-Grounding</h1></center>
+    <tr>
+        <td align=center width=900px>
+            <div class="test">
+
+                <div style="float:left">
+                    <div>
+                        <figcaption style="text-align:left">
+                           &nbsp; <strong>Query</strong>: The <strong>collision</strong> that happens  &nbsp; &nbsp; <br/>
+                              after the blue sphere exits the scene.
+                        </figcaption>
+                        <img class="rounded" src = "./images/clevrer_grounding/10021_0_3.avi.gif" height="145px"></img>
+                    </div>
+                </div>
+
+                <div style="float:left">
+                    <div>
+                        <figcaption style="text-align:left">
+                           &nbsp; <strong>Query</strong>: The cube <strong>enters</strong> the scene before &nbsp; &nbsp; <br/>
+                              the rubber sphere enters the scene.
+                        </figcaption>
+                        <img class="rounded" src = "./images/clevrer_grounding/10002_0.avi.gif" height="145px"></img>
+                    </div>
+                </div>
+
+
+                <div style="float:left">
+                    <div>
+                        <figcaption style="text-align:left">
+                          &nbsp;  &nbsp;<strong>Query</strong>: The <strong>object</strong> that collides &nbsp;<br/>
+                             with the brown cube.
+                        </figcaption>
+                        <img class="rounded" src = "./images/clevrer_grounding/10000_1.avi.gif" height="145px"></img> 
+                    </div>
+                </div>
+
+            </div>
+        </td>
+    </tr>
+        <td align=center width=900px>
+            <figcaption>We visualize typical examples of CLEVRER-Grounding. The query expressions are shown on top of the videos and the spatio-temporal localization results in the videos are bounded with green boxes. DCL can explicitly ground object and event concepts, analyze temporal structures, and understanding the complex logic to localize the target event or object.
+        </td>
+</table>
+<hr>
+
+<table align=center width=900px>
+    <center><h1><a name="Qualitative Results on CLEVRER-Retrieval"></a>Qualitative Results on CLEVRER-Retrieval</h1></center>
+    <tr>
+        <td align=center width=900px>
+            <center>
+            <strong>Query expression</strong>: A video that contains a <font color=red><b>collision</b></font> that happens before the <font color=green><b>green</b></font> rubber cube enters the scene.
+            <div class="test">
+                <div style="float:left">
+                    <div>
+                        <img class="rounded" src = "./images/clevrer_retrieval/10398_top1.avi.gif" height="140px"></img> &nbsp; <br/>
+                        <strong> Top 1 </strong>
+                    </div>
+                </div>
+
+                <div style="float:left">
+                    <img class="rounded" src = "./images/clevrer_retrieval/10388_top2.avi.gif" height="140px"></img> &nbsp; <br/>
+                    <strong> Top 2 </strong>
+                </div>
+
+                <div style="float:left">
+                    <img class="rounded" src = "./images/clevrer_retrieval/10342_top3.avi.gif" height="140px"></img> &nbsp; <br/>
+                    <strong> Top 3 </strong>
+                </div>
+
+                <div style="float:left">
+                    <img class="rounded" src = "./images/clevrer_retrieval/10899_top4.avi.gif" height="140px"></img> <br/>
+                    <strong> Top 4 </strong>
+                </div>
+
+            </div>
+            </center>
+        </td>
+    </tr>
+    <td align=center width=600px>
+        <figcaption>We visualize a typical example of CLEVRER-Retrieval. Gallery videos with top 4 ranks are shown. DCL can explicitly ground object and event concepts, analyze their relations and perform step-by-step reasoning to get the positive gallery videos.</figcaption>
+    </td>
+
+
+</table>
+<hr>
+
+<table align=center width=900px>
+    <center><h1><a name="Qualitative Results on BLOCK TOWERS"></a>Qualitative Results on BLOCK TOWERS</h1></center>
+    <tr>
+        <td align=center width=900px>
+            <center>
+            <div class="test">
+
+                <div style="float:left">
+                    <div>
+                        <figcaption style="text-align:left"><strong>Q.</strong>: Are there any falling green objects?&nbsp; &nbsp;<br/>
+                            <strong>A.</strong>: No. &nbsp; (<strong>GT.</strong>: No)
+                        </figcaption>
+                        <img class="rounded" src = "./images/qa_blocks/420_-2.avi.gif" height="175px"></img>
+                    </div>
+                </div>
+
+                <div style="float:left">
+                    <div>
+                        <figcaption style="text-align:left"><strong>Q.</strong>: How many falling blocks are there?&nbsp; &nbsp;<br/>
+                            <strong>A.</strong>: 2. &nbsp; (<strong>GT.</strong>: 2)
+                        </figcaption>
+                        <img class="rounded" src = "./images/qa_blocks/452_-2.avi.gif" height="175px"></img>
+                    </div>
+                </div>
+
+                <div style="float:left">
+                    <div>
+                        <figcaption style="text-align:left"><strong>Q.</strong>: What is the color of the block at the top?&nbsp; &nbsp;<br/>
+                            <strong>A.</strong>: Blue. &nbsp; (<strong>GT.</strong>: Blue)
+                        </figcaption>
+                        <img class="rounded" src = "./images/qa_blocks/279_-2.avi.gif" height="175px"></img>
+                    </div>
+                </div>
+
+
+             </div>
+            </center>
+        </td>
+    </tr>
+        <td align=center width=600px>
+            <figcaption>Qualitative Results on BLOCK TOWERS. Questions, predicted answers and ground-truth anoswers are
+             marked with <strong>Q.</strong>, <strong>A.</strong> and <strong>GT.</strong>, respectively. Extracted object trajectories are bounded by the target objects' predicted colors.
+              <strong>Falling</strong> objects are marked with <font color=red><b>falling</b></font> on top of their bounding boxes.  </figcaption>
+        </td>
+    </tr>
+
+</table>
+<hr>
+
+<table align=center width=900px>
+    <center><h1><a name="Failure Cases on CLEVRER-QA">Failure Cases on CLEVRER-QA</h1></center>
+    <tr>
+        <td align=center width=900px>
+            <center><img class="rounded" src = "./images/framework.png" height="300px"></img></center>
+        </td>
+    </tr>
+</table>
+<hr>
+
+</body>
+</html>
